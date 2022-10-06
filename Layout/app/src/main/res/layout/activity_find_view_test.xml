@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FindViewTestActivity">
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="뭐지?"/>
+    <Button
+        android:id="@+id/btn_Click"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="버튼을 누르기"/>
+    <Button
+        android:id="@+id/btnxmlimport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="xml import해서 작업하기"/>
+    <Button
+        android:id="@+id/btnanonymous"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="익명함수로 작업하기"/>
+    <Button
+        android:id="@+id/btnanonymous_lambda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="익명함수로 작업하기(feat.람다로표현)"/>
+    <ImageView
+        android:id="@+id/myimg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/dog"/>
+</LinearLayout>

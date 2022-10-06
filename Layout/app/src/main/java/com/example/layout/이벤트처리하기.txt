@@ -1,0 +1,55 @@
+[이벤트 처리하기]
+build.gradle(module)
+id 'kotlin-android-extensions'  //xml을 바로 import해서 쓸게요~
+
+
+
+각 위젯별로 이벤트가 발생할 때 실행될 리스너의 메소드들이 정의되어 있으며 이벤트를 처리하기 위해서
+리스너를 상속받아 메소드를 오버라이딩해서 처리하고 싶은 일들을 구현한다.
+0. click 이벤트인 경우
+ 1) 이벤트가 발생되면 실행될 메소드를 정의
+ 2) 레이아웃 리소스인 xml파일에서 onclick속성에 메소드를 연결
+   android:onClick="메소드명"
+   권하지 않는 방법
+
+1. 기본방법
+ 1). setContentView에 의해서 xml이 등록되어 있는 위젯이 초기화되어 객체로 생성되고 액티비티에 배치되어야 위젯을 가져올 수 있다.
+ 2). 이벤트를 연결하고 싶은 위젯을 멤버변수로 선언
+ 3). findViewById메소드를 이용해서 해당 id로 정의한 객체를 찾아오기
+ 4). 이벤트가 발생했을 때 실행할 기능를 구현하기 위해서 리스너 클래스를 상속해서 이벤트핸들러 클래스를 만든다.
+   => 리스너를 구현한 클래스를 별도의 클래스로 정의해도 좋지만(MyListener) - 이렇게 작업하면 액티비티의 위젯들을 컨트롤하기 위해서
+      액티비티의 정보를 리스너에 넘겨주어야 한다.(불편)
+   ==> 액티비티가 리스너를 상속하도록 작성하는 것이 일반적
+ 5). 뷰(위젯)와 이벤트를 연결한다.
+    뷰객체.setXXXListener(리스너객체)
+                          --------
+                          우리가 만든 리스너클래스를 객체생성해서 연결
+
+2. xml파일을 import해서 사용하기
+  => build.gradle파일(모듈)에 플러그인을 등록해서 설치하고 작업해야 한다.
+  => 1번 기본 방법과 동일
+     xml을 엑티비티에서 import하면 findViewById로 xml에 정의된 위젯들을 가져오지 않아도 된다.
+
+3. 익명클래스를 만들고 작업
+  - 1번과 같은 방법을 사용하면 번거롭다. 짧게 작업할 수 있도록 위젯과 익명클래스를 만들고 바로 연결해서 작업
+  객체.setOnClickListener(object : View.OnClickListener {
+                         -------------------------------
+                            object객체는 View.OnClickListener를 상속하는 이름없는 클래스의 객체
+                            object객체는 View.OnClickListener의 하위객체이므로 더이상 Context객체의 하위가 아니다.
+                   override fun onClick(v: View?) {
+                       버튼이 눌려질 대 실행할 명령문
+                   }
+               })
+
+    **원래는=>
+    class 클래스명:View.OnClickListener{
+
+    }
+    var object:클래스명 = 클래스명()
+
+    **클래스선언과 생성을 한꺼번에=>
+    객체.setOnClickListener(object:View.OnclickListener{
+
+    })
+
+4. 익명클래스를 만들고 작업 - 람다이용하기

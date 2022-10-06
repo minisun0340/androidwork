@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/maindataView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="메인액티비티데이터:"
+            />
+        <EditText
+            android:id="@+id/maindata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/btn_get"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="데이터가져오기"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/senddataView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="메인액티비티데이터:"
+            />
+        <EditText
+            android:id="@+id/senddata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/btn_set"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="프레그먼트로 데이터 보내기"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/fragmentView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="프레그먼트에서 전달된 데이터:"
+            />
+        <EditText
+            android:id="@+id/fragment_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="#FFC107"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_showregister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:tag="first"
+            android:onClick="btn_click"
+            android:text="회원가입" />
+
+        <Button
+            android:id="@+id/btn_showlogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:tag="second"
+            android:onClick="btn_click"
+            android:text="로그인" />
+
+        <Button
+            android:id="@+id/btn_showmypage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:tag="third"
+            android:onClick="btn_click"
+            android:text="마이페이지" />
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/mycontainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,31 @@
+<<호출한 곳으로 되돌아올때 값을 가져오는 경우 인텐트의 작업>>
+1. 호출한 액티비티 - ReturnDataFirstActivity
+  1) startActivityForActivity메소드를 호출하며 인텐트와 request코드를 셋팅
+                                                      ----------
+                                                      액티비티 안에서 어떤 위젯이 요청한 것인지 알기위해 설정
+                                                      어디서 작업했든 값을 가지고 되돌아오는 경우 무조건 onActivityResult가 호출
+                                                      onActivityResult 메소드는 하나..
+                                                      여러 개의 액티비티에서 되돌아온다면 어떤 작업에 대한 리턴인지 알 수 없다.
+  2)startActivityForResult메소드가 호출되면서 setResult에서 넘겨준 인텐트가 전달되면 여기서 공유된 데이터를 꺼낼 수 있다.
+2. 호출된 액티비티 - ReturnDataSecondActivity
+  1) 실행을 완료하고 첫 번째 액티비티로 돌아갈 때 startActivityForResult메소드가 호출되도록 하려면
+  setResult(Activity.RESULT_OK,intent) 를 호출해야한다.
+            ------------------  -----
+            처리결과를 리턴      되돌아갈 때 쓰던 Intent객체를 넘겨준다
+
+
+
+<<Intent의 달라진 부분>>
+1. ActivityResultLauncher객체 생성
+2. ActivityResultLauncher객체 내부에서 registerForActivityResult를 생성하며 실행할 코드를 작성
+    => 액티비티를 실행하고 되돌아올 때 콜백이 실행되도록 설정
+        registerForActivityResult함수를 이용해서 작업
+        registerForActivityResult함수의 매개변수로 ActivityResultConstracts객체의 Static함수들을 명시
+         [ActivityResultConstracts종류]
+         StartActivityForResult() : 요청한 인텐트를 통해서 액티비티를 실행하고 액티비티 실행한 후 결과를 다시 받아서 처리하는 경우
+         GetContent(): 사용자 ContentProvider를 작업하며 선택한 콘텐트의 Uri반환하는 경우
+         TakePicture() : 사진촬영 후 지정 경로에 저장하고 Bitmap을 반환하는 경우
+         ...
+         ...
+        구버전에서 onAcitvityResult에 정의하던 작업을 콜백메소드 안에 정의한다.
+3. ActivityResultLauncher객체의 launch메소드를 이용하여 인텐트 의뢰

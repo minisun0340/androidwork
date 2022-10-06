@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+<!--
+Relativelayout은 상대적이라는 의미이고, 상대적이라는 것은 기준이 있어야한다.
+ 기준은 둘 - 부모뷰, 특정뷰
+-->
+    <!--부모뷰를 기준으로 이동-->
+    <TextView
+        android:id="@+id/firstview"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#ff0000"
+        android:layout_centerInParent="true"
+        />
+    <TextView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="#000000"
+        android:layout_centerInParent="true"
+        android:layout_alignLeft="@+id/firstview"
+        android:layout_alignBottom="@+id/firstview"/>
+
+    <!--부모뷰의 아래쪽으로 이동-->
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#00ff00"
+        android:layout_alignParentBottom="true"/>
+    <!--부모뷰의 오른쪽으로 이동-->
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#00ffff"
+        android:layout_alignParentRight="true"/>
+    <!--부모뷰의 수평가운데로 이동-->
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#D38F7A"
+        android:layout_centerHorizontal="true"/>
+    <!--부모뷰의 수직가운데로 이동-->
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#E91E63"
+        android:layout_centerVertical="true"/>
+
+</RelativeLayout>

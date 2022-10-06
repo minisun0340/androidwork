@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ScrollLayoutExam">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:background="#000000"
+        android:padding="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#ffffff">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/java"
+                    android:background="#000000"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="김샘자바"
+                    android:textSize="20dp"
+                    android:padding="10dp"
+                    android:gravity="center_vertical"
+                    android:textColor="#ffffff"
+                    android:background="#000000"/>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/java"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Java Programming"
+                android:textSize="20dp"
+                android:paddingLeft="10dp"
+                android:gravity="center_vertical"
+                android:textColor="#857C7C"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="basic Java와 advanced Java"
+                android:textSize="17dp"
+                android:paddingLeft="10dp"
+                android:gravity="center_vertical"
+                android:textColor="#857C7C"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/spring"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Spring"
+                android:textSize="20dp"
+                android:paddingLeft="10dp"
+                android:gravity="center_vertical"
+                android:textColor="#857C7C"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Spring을 이용한 웹구축"
+                android:textSize="17dp"
+                android:paddingLeft="10dp"
+                android:gravity="center_vertical"
+                android:textColor="#857C7C"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/hadoop"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="hadoop"
+                android:textSize="20dp"
+                android:paddingLeft="10dp"
+                android:gravity="center_vertical"
+                android:textColor="#857C7C"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="bigdata처리"
+                android:textSize="17dp"
+                android:paddingLeft="10dp"
+                android:gravity="center_vertical"
+                android:textColor="#857C7C"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/android"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="android"
+                android:textSize="20dp"
+                android:paddingLeft="10dp"
+                android:gravity="center_vertical"
+                android:textColor="#857C7C"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="IoT클라이언트"
+                android:textSize="17dp"
+                android:paddingLeft="10dp"
+                android:gravity="center_vertical"
+                android:textColor="#857C7C"/>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

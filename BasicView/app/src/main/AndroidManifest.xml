@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.basicview">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BasicView">
+        <activity android:name=".SeekBarTestActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ToggleSwitchTest"></activity>
+        <activity android:name=".ImageTestActivity"></activity>
+        <activity android:name=".RadioButtonTestActivity" />
+        <activity android:name=".CheckBoxExam" />
+        <activity android:name=".CheckBoxExam_radio">
+
+        </activity>
+        <activity android:name=".CheckBoxActivity" />
+        <activity android:name=".EditTextTestActivity" />
+        <activity android:name=".MainActivity" />
+    </application>
+
+</manifest>

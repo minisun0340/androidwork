@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CheckBoxExam"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="197dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="짜장(6000원)" />
+
+        <RadioButton
+            android:id="@+id/radioButton9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="짬뽕(7000원)" />
+
+        <RadioButton
+            android:id="@+id/radioButton10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="울면(7500원)" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:text="식사메뉴 :" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:text=" "/>
+    </LinearLayout>
+
+
+    <CheckBox
+        android:id="@+id/mycheck01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="해물(2000원)"
+        android:tag="1"/>
+
+    <CheckBox
+        android:id="@+id/mycheck02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="육수(1000원)"
+        android:tag="2"/>
+
+    <CheckBox
+        android:id="@+id/mycheck03"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="고기(2000원)"
+        android:tag="3"/>
+
+    <CheckBox
+        android:id="@+id/mycheck04"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="면(1000원)"
+        android:tag="4"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <TextView
+        android:id="@+id/mytotalprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        />
+    </LinearLayout>
+</LinearLayout>
